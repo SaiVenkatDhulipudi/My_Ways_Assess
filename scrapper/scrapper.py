@@ -6,7 +6,6 @@ from selenium import webdriver
 from utils import FindAllLocations
 
 PROJECT_PATH = os.path.abspath(os.path.dirname(__file__))
-print(PROJECT_PATH)
 final_result = []
 
 
