@@ -5,8 +5,6 @@ from selenium import webdriver
 def FindAllLocations(url):
     """
     A function to get all the urls associated with the url
-    Eg: search for IBI it will gives all the places with name IBI,
-    so to get all the we will use this function
     """
     options = webdriver.ChromeOptions()
     options.add_argument("headless")

@@ -8,6 +8,8 @@ from utils import FindAllLocations
 PROJECT_PATH = os.path.abspath(os.path.dirname(__file__))
 final_result = []
 
+DETAILS_DICT = {"address": "Address: ", "website": "Website: ", "phone": "Phone: "}
+
 
 def parse_place(selector: Selector):
     def aria_with_label(label):
@@ -19,21 +21,23 @@ def parse_place(selector: Selector):
         text = aria_with_label(label).get("")
         return text.split(label, 1)[1].strip()
 
-    result = {
-        "name": "".join(selector.css("h1 ::text").getall()).strip(),
-        "address": aria_no_label("Address: "),
-        "website": aria_no_label("Website: "),
-        "phone": aria_no_label("Phone: "),
-    }
+    try:
+        result = {"name": "".join(selector.css("h1 ::text").getall()).strip()}
+    except Exception:
+        result = {"name": None}
+    for key, value in DETAILS_DICT.items():
+        try:
+            result |= {key: aria_no_label(value)}
+        except Exception:
+            result |= {key: None}
     return result
 
 
-def FindLocation(company_name: str, location=None | str):
-    urls = ["https://www.google.com/maps/search/{}".format(company_name)]
-    if location:
-        urls[0] += f"+{location}"
-    else:
-        urls += FindAllLocations(*urls)
+def FindLocation(company_name: str):
+    url = "https://www.google.com/maps/search/{}".format(company_name)
+    urls = FindAllLocations(url)
+    if not urls:
+        urls = [url]
     for url in urls:
         options = webdriver.ChromeOptions()
         options.add_argument("headless")
@@ -53,9 +57,8 @@ def FindLocation(company_name: str, location=None | str):
 
 if __name__ == "__main__":
     company_name = input("enter company name : ")
-    location = input("enter location : ")
     try:
-        FindLocation(company_name, location)
+        FindLocation(company_name)
     except Exception:
         pass
     with open(PROJECT_PATH + "/data.json", "w") as file:
