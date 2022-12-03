@@ -54,7 +54,7 @@ def FindLocation(company_name: str, location=None | str):
 
 if __name__ == "__main__":
     company_name = input("enter company name : ")
-    location = input("enter location")
+    location = input("enter location : ")
     try:
         FindLocation(company_name, location)
     except Exception:
