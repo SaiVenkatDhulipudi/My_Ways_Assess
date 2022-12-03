@@ -1,0 +1,25 @@
+repos:
+    - repo: https://github.com/pre-commit/mirrors-autopep8
+      rev: 'v1.6.0'
+      hooks:
+          - id: autopep8
+            args: [--diff,'--ignore=E501,W503,E203']
+    - repo: https://github.com/psf/black
+      rev: 22.3.0
+      hooks:
+          - id: black
+            exclude: migrations/
+            args: ['--skip-magic-trailing-comma']
+            language_version: python3.8
+    - repo: https://github.com/pycqa/flake8
+      rev: 3.9.2
+      hooks:
+          - id: flake8
+            exclude: migrations/
+            args: ['--ignore=E501,W503,E203,E211']
+    -   repo: https://github.com/pycqa/isort
+        rev: 5.10.1
+        hooks:
+            - id: isort
+              exclude: migrations/
+              args: [ "--profile", "black" ]
