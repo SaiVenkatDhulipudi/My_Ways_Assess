@@ -1,8 +1,50 @@
 [
     {
-        "name": "IBI Group, Hyderabad",
-        "address": "#101, Gowra Grand, Patigadda, Begumpet, Hyderabad, Telangana 500003",
-        "website": "ibigroup.com",
-        "phone": "040 4203 9481"
+        "name": "IBM India Pvt Ltd",
+        "address": "XPMJ+CC3, First Technology Place, adjacent to Satya Sai Baba Hospital, KIADB Export Promotion Industrial Area, Whitefield, Bengaluru, Karnataka 560066",
+        "website": "ibm.com",
+        "phone": null
+    },
+    {
+        "name": "IBM India Private Limited",
+        "address": "XJ2V+33R, Bengaluru, Embassy Golf Links Business Park, Challaghatta, Bengaluru, Karnataka 560071",
+        "website": "ibm.com",
+        "phone": "022 6274 2000"
+    },
+    {
+        "name": "IBM India Private Limited D1 Block",
+        "address": "Manyata Embassy Business Park, Manyata Tech Park Rd, Manayata Tech Park, Thanisandra, Bengaluru, Karnataka 560045",
+        "website": null,
+        "phone": null
+    },
+    {
+        "name": "IBM",
+        "address": "XJ3V+5HP, Embassy Golf Links Road, Embassy Golf Links Business Park, Domlur, Bengaluru, Karnataka 560071",
+        "website": "ibm.com",
+        "phone": "080 4177 4001"
+    },
+    {
+        "name": "IBM India",
+        "address": "\u0938\u0941\u092c\u094d\u0930\u092e\u0928\u094d\u092f\u093e \u0906\u0930\u094d\u0915\u0947\u0921, Subramanya Arcade Tower-C, Bannerghatta Main Rd, OLd Gurappanapalya, BTM Layout, Bengaluru, Karnataka 560029",
+        "website": null,
+        "phone": "080 4068 3000"
+    },
+    {
+        "name": "IBM Global Services India Limited",
+        "address": "XM3J+RWJ, Royal Comfort, Old Airport Rd, Bengaluru, Karnataka 562157",
+        "website": null,
+        "phone": "1800 102 6666"
+    },
+    {
+        "name": "IBM India private limited",
+        "address": "Bhartiya Centre of Information Technology, IBM India Pvt Ltd, Thanisandra Main Rd, Chokkanahalli, Bengaluru, 560064",
+        "website": null,
+        "phone": null
+    },
+    {
+        "name": "IBM India Pvt Ltd",
+        "address": "XPPP+C9M, International Tech Park, Bengaluru, Karnataka",
+        "website": null,
+        "phone": null
     }
 ]
